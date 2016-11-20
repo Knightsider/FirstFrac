@@ -101,7 +101,7 @@ public class Frac {
     }
 
     public Boolean isEqual(Frac frac) {
-        Frac f1 = this.shortFrac(), f2 = this.shortFrac();
+        Frac f1 = this.shortFrac(), f2 = frac.shortFrac();
         return (f1.numerator == f2.numerator && f1.denominator == f2.denominator);
     }
 
@@ -110,6 +110,5 @@ public class Frac {
         Frac f2 = frac.mult(this.denominator).div(this.denominator);
         return (f1.isEqual(f2) ? 0 : f1.numerator > f2.numerator ? 1 : -1);
     }
-
-
+    
 }
